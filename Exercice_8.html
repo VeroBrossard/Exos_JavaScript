@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercice_8 JavaScript</title>
+		<meta charset="UTF-8" />
+		<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="bkgdiv">
+			<h1>Exercice 8 / JavaScript</h1>
+			<p style="font-size: 16px">
+        Demander à l’utilisateur de saisir son âge. <br />
+        S’il a plus de 18 ans, afficher " Vous êtes majeur ".<br />
+         Sinon afficher " Vous êtes mineur ".
+        <br />
+			</p>
+    </div>
+
+
+		<div class="bkgdiv">
+			<form style="font-size: 16px">
+				<label for="firstNumber">Quelle est votre âge ?: </label>
+				<input type="text" id="firstNumber" name="firstNumber" /><br />
+
+				<button id="submit" name="submit" onclick="minor()">Valider</button>
+			</form>
+		</div>
+
+    <!-- <script src="scripts/main6.js"> -->
+      <script>
+       function minor() {
+      let age, result;
+      age = Number(document.getElementById('firstNumber').value);
+      // if (age instanceof Number){
+      //   window.alert('ok c\'est un nombre');
+      // }else {
+      //   window.alert('ce n\'est pas un nombre');
+      // }
+
+      if (age > 18){
+        window.alert('Vous êtes majeur...');
+      }else {
+        window.alert('Vous êtes mineur...');
+      }
+    }
+    </script>
+
+<!--  exemple:
+   let age = 15;
+if(age>17){
+    console.log('adult');
+}else if(age>12){
+    console.log('teenager');
+}else{
+    console.log('kid');
+} -->
+
+		
+<div style="margin: 50px;"> <!-- lien de retour à l'index des exos -->
+	<hr >
+	<a href="javascript:window.close();">Fermer la fenêtre</a>
+	<!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+</div>
+	</body>
+</html>

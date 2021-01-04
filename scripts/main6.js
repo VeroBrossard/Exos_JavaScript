@@ -1,13 +1,25 @@
-
-
-    function reste() {
-      var nbr1, nbr2, reste;
-      nbr1 = Number(document.getElementById('firstNumber').value);
-      nbr2 = Number(document.getElementById('secondNumber').value);
-      reste = (nbr1 % nbr2);    // Ta variable à arrondir 
-      reste = reste.toFixed(2);  //r'enverra xx,xx
-      window.alert('Le reste de cette division  est : ' + reste);
-    }
+  document.getElementById('submit').addEventListener('click', function(event) {event.preventDefault(); //désactive les fonctions primaires du bouton 
+    var nbr1, nbr2, reste;
+    nbr1 = Number(document.getElementById('firstNumber').value);
+    nbr2 = Number(document.getElementById('secondNumber').value);
+    //test sur valeurs ...
+    reste = (nbr1 % nbr2);    // Ta variable à arrondir 
+    reste = reste.toFixed(2);  //r'enverra xx,xx
+    document.getElementById('paragraphResult').innerHTML ="le résultat est égal à:" + reste ;
+}, false);
+    
+    
+    // function reste(e) { 
+    //  // fonction pour bloquer le rechargement de la page 
+    //   e.preventDefault();
+    //   var nbr1, nbr2, reste;
+    //   nbr1 = Number(document.getElementById('firstNumber').value);
+    //   nbr2 = Number(document.getElementById('secondNumber').value);
+    //   reste = (nbr1 % nbr2);    // Ta variable à arrondir 
+    //   reste = reste.toFixed(2);  //r'enverra xx,xx
+    //   // window.alert('Le reste de cette division  est : ' + reste);
+    //   document.getElementById('paragraphResult').innerHTML ="le résultat est égal à:" + reste ;
+    // }
 
     
     

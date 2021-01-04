@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercice_7 JavaScript</title>
+		<meta charset="UTF-8" />
+		<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="bkgdiv">
+			<h1>Exercice 7 / JavaScript</h1>
+			<p style="font-size: 16px">
+				Demander à l’utilisateur sa pointure et son année de naissance. <br />
+				Créer une fonction qui fait les calculs suivants : <br />
+
+				Multiplier la pointure par 2 <br />
+				Ajouter 5 au résultat <br />
+				Multiplier le tout par 50 <br />
+				Soustraire l’année de naissance <br />
+				Ajouter au tout 1766 <br />
+				La fonction doit retourner le résultat. <br />
+				Tester avec votre date de naissance et votre pointure. <br />
+				<b>Attention : n'utiliser qu'une seule variable de résultat.</b>
+				<br />
+			</p>
+    </div>
+    
+<!-- <script>
+  var var1 == '2' ;
+    somme="somme";
+function fonction_somme()
+{
+document.getElementById(somme).innerHTML=var1 + var2;
+}
+</script>
+
+et j affiche la somme dans un span dans l'html
+
+<div id="resultat"><span id="somme"></span></div id="resultat"> -->
+
+		<div class="bkgdiv">
+			<form style="font-size: 16px">
+				<label for="shoeSize">Pointure : </label
+				><input type="text" id="shoeSize" name="shoeSize" /><br />
+				<label for="yearOfBirth">Année de naissance : </label
+				><input type="text" id="yearOfBirth" name="yearOfBirth" /><br />
+				<button id="submit" name="submit" onclick="calculs()">Valider</button>
+			</form>
+		</div>
+
+		<!-- <script src="scripts/main6.js"> -->
+		<script>
+			// En javascript la fonction isNaN() (pour Is Not A Number) permet de tester si une chaine de caractères est un nombre.
+
+			// Utilisation de isNaN
+
+			// var isNotNumber = 'w00t';
+			// var isNumber = '3.5';
+			// if(isNaN(isNotNumber) == true)
+			// {
+			// 	alert('isNotNumber n\'est pas un nombre');
+			// }
+			// else
+			// {
+			// 	alert('isNotNumber est un nombre');
+			// }
+			// if(isNaN(isNumber) == true)
+			// {
+			// 	alert('isNumber n\'est pas un nombre');
+			// }
+			// else
+			// {
+			// 	alert('isNumber est un nombre');
+			// }
+		</script>
+
+		<script>
+			function calculs() {
+				let nbr1, nbr2, result;
+				nbr1 = Number(document.getElementById('shoeSize').value);
+
+				if (isNaN(nbr1) == true) {
+					alert("Cette pointure n'est pas un nombre");
+				} else {
+					nbr2 = Number(document.getElementById('yearOfBirth').value);
+					if (isNaN(nbr2) == true) {
+						alert("Cette année n'est pas un nombre");
+					} else {
+						result = (nbr1 * 2 + 5) * 50 - nbr2 + 1766; 
+						window.alert('Le resultat est : ' + result);
+					}
+				}
+      }
+
+		</script>
+
+		<div style="margin: 50px">
+			<!-- lien de retour à l'index des exos -->
+			<hr />
+			<a href="javascript:window.close();">Fermer la fenêtre</a>
+			<!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+		</div>
+	</body>
+</html>
