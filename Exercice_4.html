@@ -10,7 +10,7 @@
             <h1>Exercice 4 / JavaScript</h1>
             <p style="font-size: 18px">
                 Refaire l’exercice 2 <i> (Définir trois variables : lastName, firstName et city. Les afficher comme sur l'image correspondant à l'exercice.) </i>, en demandant le nom, le prénom et la ville à l’utilisateur.
-                <img src="images/modeleExo2.png" alt="photo de l'exercice 2" />
+                <img src="images/modele_exo2.png"  class="imgreduite"   alt="photo de l'exercice 2" />
             </p>   
         </div>
         <div class="bkgdiv">
@@ -23,7 +23,7 @@
         </div>
 
     
-     <script>
+     <script>    //  saisie des infos façon formulaire 
       function getInfo() {
     // Sélectionner l'élément input et récupérer sa valeur
     //var input = document.getElementById("in").value;
@@ -37,7 +37,25 @@
 }
     </script>
 
+<!-- correction   -->
+<!-- <script>
+	var lastNameC = prompt('Nom');
+	var firstNameC = prompt('Prénom')
+	var cityC = prompt('Ville')
+	if( lastNameC, firstNameC, cityC == null )
+		{
+			alert('Vous avez cliqué sur Annuler');
+	} else {
+			alert ('Nom: ' + lastNameC + '\n' + 'Prénom: ' + firstNameC + '\n' + 'Ville: ' + cityC);
+	}
+	
+	</script> -->
 
+<div style="margin: 50px;"> <!-- lien de retour à l'index des exos -->
+	<hr >
+	<a href="javascript:window.close();">Fermer la fenêtre</a>
+	<!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+</div>
 
 <!-- exemple par https://waytolearnx.com/2019/07/comment-recuperer-la-valeur-dun-input-texte-en-javascript.html
     <input type="text" placeholder="Entrez une valeur ici" id="in">
