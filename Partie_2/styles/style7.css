@@ -33,7 +33,7 @@ input[type=checkbox]{
 }
 
 /* The message box is shown when the user clicks on the password field */
-#message {
+#message, #message2 {
   display:none;
   background: #f1f1f1;
   color: #000;
@@ -42,7 +42,7 @@ input[type=checkbox]{
   margin-top: 10px;
 }
 
-#message p {
+#message p, #message2 p {
   padding: 0px 25px;
   font-size: 14px;
   background-color: chartreuse;
@@ -72,6 +72,13 @@ input[type=checkbox]{
   content: '✖';
   /* content: "&#x2716;";   Hex Code:*/
   /* content: "&#10006;";  Decimal Code*/
+}
+.show-password {
+	font-size: 9px;
+	text-transform: uppercase;
+	/* position: absolute; */
+	cursor: pointer;
+	margin-left: -48px;
 }
 
 /* The ::before selector inserts something before the content of each selected element(s). Use the content property to specify the content to insert. Use the ::after selector to insert something after the content. */
