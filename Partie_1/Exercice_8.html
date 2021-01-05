@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercice_8 JavaScript</title>
+		<meta charset="UTF-8" />
+		<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="bkgdiv">
+			<h1>Exercice 8 / JavaScript</h1>
+			<p style="font-size: 16px">
+        Demander à l’utilisateur de saisir son âge. <br />
+        S’il a plus de 18 ans, afficher " Vous êtes majeur ".<br />
+         Sinon afficher " Vous êtes mineur ".
+        <br />
+			</p>
+    </div>
+    <p style="text-align: center;">      
+      pense-bête : mettre des test sur validité, <br/>voir corr8_result.js correction Laurent
+    </p>
+
+		<div class="bkgdiv">
+			<form style="font-size: 16px">
+				<label for="firstNumber">Quelle est votre âge ?: </label>
+        <input type="text" id="firstNumber" name="firstNumber" /><br />
+        
+				<button id="submit" name="submit" onclick="minor()">Valider</button>
+      </form>
+    </div>
+    <div class="bkgdiv"> <!--   pourles réponses  -->
+      <p  id="show" style="color: #D8000C;" > Résultat...
+			</p>
+    </div>
+
+
+      <script> // mettre des test sur validité ,voir corr8_result.js correction Laurent
+       function minor() {
+      let age;
+      age = parseInt(document.getElementById('firstNumber').value);
+      // if (age instanceof Number){
+      //   window.alert('ok c\'est un nombre');
+      // }else {
+      //   window.alert('ce n\'est pas un nombre');
+      // }
+      event.preventDefault(); //désactive les fonctions primaires du bouton 
+
+      if (age > 18){
+      document.getElementById("show").innerHTML = "Vous êtes majeur. (" + age +" ans)";
+      }else {
+      document.getElementById("show").innerHTML = "Vous êtes Mineur !!!. (" + age +"ans)";
+      }
+    }
+    </script>
+
+    
+
+ <!-- lien de retour à l'index des exos -->
+<div style="margin: 50px;">
+	<hr >
+	<a href="javascript:window.close();">Fermer la fenêtre</a>
+	<!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+</div>
+	</body>
+</html>

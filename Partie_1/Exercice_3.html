@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Exo 3 / JavaScript</title>
+		<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="bkgdiv">
+			<h1>Exo 3 / JavaScript</h1>
+
+			<p style="font-size: 18px">
+				Afficher une boîte de dialogue permettant de saisir son prénom.
+				<br />
+				Afficher dans une boîte de dialogue "Bonjour, " suivi du prénom saisi.
+			</p>
+		</div>
+
+		<script>
+			var firstname = prompt('entrez votre Prénom..',"");
+			if (firstname == null) {
+				window.alert('ok, au revoir...');
+			} else if (firstname == '') {
+				window.alert(
+					"Je n'ai pas saisi votre prénom \n Veuillez recommencer...",
+				);
+			} else {
+				window.alert('Bonjour,' + firstname);
+			}
+		</script>
+
+		<!-- <script>
+			var firstname = prompt('entrez votre Prénom..SVP', '');
+			window.alert('Bonjour,' + firstname);
+		</script>  -->
+
+		
+<div style="margin: 50px;"> <!-- lien de retour à l'index des exos -->
+	<hr >
+	<a href="javascript:window.close();">Fermer la fenêtre</a>
+	<!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+</div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+/* ********** pour index  ************* */
+
+html {
+  background-color: rgb(216, 220, 223);
+}
+
+body {
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+  
+}
+
+h1 {
+  color:blue;
+  font-size: 30px;
+}
+
+header {
+  background: url(../images/banniere.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  /* border: 3px solid blueviolet; */
+  /* padding-left: 120px; */
+  width: 100%;
+}
+
+fieldset,
+div {
+  /* border: 3px solid orange; */
+  padding-left: 50px;
+  max-width: 80%;
+  margin:auto;
+ 
+}
+
+/*        classes    */
+._gras {
+  font-weight: bold;
+}
+
+/* -----------  images   ----------  */
+img {
+  max-width: 80%;
+  border: 1px solid black;
+  margin: 10px 0px 30px 20px;
+}
+
+.stop_float {
+  clear: both
+}
+
+legend {
+  padding: 0px 10px;
+  color: blue;
+  font-size: larger;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			.container {
+				/* width: 900px; */
+				border: 1px solid blue;
+				margin: auto;
+				padding: 20px 0px;
+				background-color: aqua;
+				text-align: center;
+			}
+			img {
+				height: 120px;
+				margin-right: 10px;
+			}
+		</style>
+		<title>essai2_exo5</title>
+	</head>
+	<!--   Sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value. To get the current value of an attribute, use getAttribute() ; to remove an attribute, call removeAttribute() .
+-->
+
+	<body>
+		<div class="container">
+			<img
+				src="images/image1.jpg"
+				id="image1"
+				onmouseover="imgover(this.src,0);"
+				onmouseout="imgout(this.src,0);"
+			/>
+			<img
+				src="images/image2.jpg"
+				id="image2"
+				onmouseover="imgover(this.src,1);"
+				onmouseout="imgout(this.src,1);"
+			/>
+			<img
+				src="images/image3.jpg"
+				id="image3"
+				onmouseover="imgover(this.src,2);"
+				onmouseout="imgout(this.src,2);"
+			/>
+			<img
+				src="images/image4.jpg"
+				id="image4"
+				onmouseover="imgover(this.src,3);"
+				onmouseout="imgout(this.src,3);"
+			/>
+
+			<img
+				src="images/image5.jpg"
+				id="image5"
+				onmouseover="imgover(this.src,4);"
+				onmouseout="imgout(this.src,4);"
+			/>
+		</div>
+
+		<script>
+			var source1, source2;
+
+			function imgover(SrcImg, ordre) {
+				let positionDebut;
+				source1 = SrcImg;
+				positionDebut = source1.indexOf('images/');
+				// recherche du départ de l'adresse img encours  (Retourne 64)
+				//Si il n'y a qu'un seul paramètre d'appel c'est la fin de la chaîne de caractères qui est retournée en partant de l'indexDebut.
+				source1 = source1.slice(positionDebut);
+				source2 = source1.slice(0, 13) + '_2' + source1.slice(13);
+				// construction de l'adresse de l'image de remplacement
+
+				//console.log(document.getElementsByTagName('img'))
+				// affiche la collection img (otues les images!! ) du document.
+				document.getElementsByTagName('img')[ordre].src = source2;
+			}
+
+			function imgout(SrcImg, ordre) {
+				console.log('en image out , adresse est:' + source1);
+				document.getElementsByTagName('img')[ordre].src = source1;
+			}
+		</script>
+
+		<!-- lien de retour à l'index des exos -->
+		<div style="margin: 50px">
+			<hr />
+			<a href="javascript:window.close();">Fermer la fenêtre</a>
+			<!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+		</div>
+	</body>
+</html>
+
+<!--  ************ pour rappel ********** -->
+<!-- <script>
+  var source1, source2;
+
+  function imgover(SrcImg,ordre) {
+    console.log(SrcImg);
+    //source1 = document.getElementsByTagName("img")[0].getAttribute("src");
+    //par https://stackoverflow.com/questions/11183368/how-do-i-access-src-attribute-of-img-tag-in-javascript/11183399
+    source1 = SrcImg;
+    console.log('source1 est ' + source1);
+    //alert(source1.indexOf('images/'));     // Affiche 64
+    //Recherche la position de la première occurrence d'une sous-chaîne dans une chaîne
+    // alert('partie droite :' +source1.slice(64));
+    //Si il n'y a qu'un seul paramètre d'appel c'est la fin de la chaîne de caractères qui est retournée en partant de l'indexDebut.
+    //Manipulation des strings par : https://www.devenir-webmaster.com/V2/TUTO/CHAPITRE/JAVASCRIPT/20-manipuler-les-chaines/
+    source1 = source1.slice(64);
+    console.log('Apres modif source1 est: ' + source1);
+    // console.log(source1);
+    //  source2=source1.slice(17);
+    source2 = source1.slice(0, 13) + '_2' + source1.slice(13);
+    //alert('source2 est  : ' + source2);
+    // //Element.setAttribute(scr, source2);
+    console.log(source2);
+    console.log(document.getElementsByTagName('img')) // affiche la collection img du document
+    document.getElementsByTagName('img')[ordre].src = source2;
+  }
+
+  function imgout(SrcImg,ordre) {
+    console.log('en image out , adresse est:' + source1);
+    document.getElementsByTagName("img")[ordre].src = source1;
+  }
+</script> -->

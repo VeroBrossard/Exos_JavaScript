@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" value="Doe" id="lastname" />
+    <label for="firstname">Votre prenom  : </label><input type="text" name="firstname" value="John" id="firstname" />
+    <label for="city">Votre ville  : </label><input type="text" name="city" value="New York" id="city" />
+    <button type="button" name="button" onclick="myRAZ();">RAZ</button>
+  </form>
+
+
+  <script>
+   function myRAZ() {  
+  document.getElementById('lastname').value = '';
+  document.getElementById('firstname').value = '';
+  document.getElementById('city').value = '';
+}
+  </script>
+
+
+
+  
+
+
+
+
+<!-- lien de retour à l'index des exos -->
+ <div style="margin: 50px;"> 
+  <hr >
+  <a href="javascript:window.close();">Fermer la fenêtre</a>
+  <!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+</div>
+</body>
+</html>

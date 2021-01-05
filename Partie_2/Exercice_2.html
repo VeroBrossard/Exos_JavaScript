@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 2</title>
+</head>
+<body>
+  <!-- <form>
+    <label for="lastname">Votre nom  : </label>
+    <input type="text" name="lastname" id="lastname" onblur= "window.alert('Merci de votre partcipation')" />
+  </form> -->
+
+  <form>
+    <label for="lastname">Votre nom  : </label>
+    <input type="text" name="lastname" onblur = "showMsg()"  id="lastname"; />
+  </form>
+
+  <script>
+function showMsg() {
+  window.alert('Merci de votre participation');
+}
+ </script>
+
+<!-- Evénément intrinsèque qui se déclenche lorsque l'élément perd le focus.
+Par exemple, lorsqu'on change le contenu d'un objet d'un formulaire et qu'on quitte cet objet
+
+Cet événement est enclenché quand le changement du contenu est terminé ( perte de focus ) et non au cours du changement de valeur
+Par exemple, dans une fenêtre à liste de choix, cet événement n'est pas enclanché en cour de frappe de l'utilisateur, mais seulement quand l'utilisateur valide le changement en quittant la fenêtre qui a le focus.
+
+De plus, cet événement est exécuté avant le code spécifié par onblur quand le contrôle perd le focus.
+sur site http://www.bernardquevillier.fr/toposnew/onblur.html
+
+-->
+
+
+ <!-- lien de retour à l'index des exos -->
+ <div style="margin: 50px;"> 
+    <hr >
+    <a href="javascript:window.close();">Fermer la fenêtre</a>
+    <!-- <a href="indexCSS.html" title="lien de retour à l'index des exos">Retour à l'index des Exos</a> -->
+  </div>
+</body>
+</html>
