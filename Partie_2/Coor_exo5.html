@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			.container {
+				/* width: 900px; */
+				border: 1px solid blue;
+				margin: auto;
+				background-color: aqua;
+				text-align: center;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<img
+				src="images/image1.jpg"
+				id="image1"
+				onmouseover="switchImg(this.id)"
+				onmouseout="switchImg2(this)"
+			/>
+			<img
+				src="images/image2.jpg"
+				id="image2"
+				onmouseover="switchImg(this.id)"
+				onmouseout="switchImg2(this)"
+			/>
+			<img
+				src="images/image3.jpg"
+				id="image3"
+				onmouseover="switchImg(this.id)"
+				onmouseout="switchImg2(this)"
+			/>
+			<img
+				src="images/image4.jpg"
+				id="image4"
+				onmouseover="switchImg(this.id)"
+				onmouseout="switchImg2(this)"
+			/>
+			<img
+				src="images/image5.jpg"
+				id="image5"
+				onmouseover="switchImg(this.id)"
+				onmouseout="switchImg2(this)"
+			/>
+		</div>
+
+		<script>
+			function switchImg(img) {
+				//alert(img);
+				document.getElementById(img).scr = 'images/' + img + '_2.jpg';
+			}
+
+			function switchImg2(element) {
+				//alert(img);
+				element.scr = 'images/' + element.id + '.jpg';
+			}
+		</script>
+	</body>
+</html>
+<!-- 
+<div class="container">
+  <img src="images/image1.jpg" id="image1" onmouseover="swichImg('image1')"  onmouseout="firstImg()" />
+  <img src="images/image2.jpg" id="image2" onmouseover="swichImg('image2')"  onmouseout="firstImg()" />
+  <img src="images/image3.jpg" id="image3" onmouseover="swichImg('image3')"  onmouseout="firstImg()" />
+  <img src="images/image4.jpg" id="image4"onmouseover="swichImg('image4')"  onmouseout="firstImg()" />
+  <img src="images/image5.jpg" id="image5" onmouseover="swichImg('image5')"  onmouseout="firstImg()" />
+</div>
+
+
+<script>
+
+functionswitchImg(img){
+  //alert(img);
+  document.getElementById(img).scr="images/" + img + "_2.jpg";
+
+} -->
+
+<!--    <div class="container">
+    <img src="images/image1.jpg" id="image1" onmouseover="swichImg('this.id')"  onmouseout="swichImg('this')" />
+    <img src="images/image2.jpg" id="image2" onmouseover="swichImg('this.id')"  onmouseout=swichImg('this')" />
+    <img src="images/image3.jpg" id="image3" onmouseover="swichImg('this.id')"  onmouseout="swichImg('this.id')" />
+    <img src="images/image4.jpg" id="image4"onmouseover="swichImg(('this.id')"  onmouseout="swichImg('this.id')" />
+    <img src="images/image5.jpg" id="image5" onmouseover="swichImg('this.id')"  onmouseout="swichImg('this.id')" />
+  </div>
+
+
+<script>
+
+  function switchImg(img){
+    //alert(img);
+    document.getElementById(img).scr="images/" + img + "_2.jpg";
+
+  }
+  function switchImg2(img){
+    //alert(img);
+    document.getElementById(img).scr="images/" + img + ".jpg";
+
+  }
+-->

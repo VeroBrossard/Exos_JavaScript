@@ -6,55 +6,81 @@
 		<style>
 			.container {
 				/* width: 900px; */
+				height: 200px;
+				display: flex;
 				border: 1px solid blue;
 				margin: auto;
-				padding: 20px 0px;
-				background-color: aqua;
-				text-align: center;
+				background-color: rgb(241, 174, 211);
+        justify-content:center;
+        align-content: center;
+			}
+			.boxImg {
+				background-color: aliceblue;
+				margin : 20px;
+        padding : 20px 0px 0px 0px;
 			}
 			img {
 				height: 120px;
-				margin-right: 10px;
+				margin: 0px 20px;
 			}
 		</style>
-		<title>essai2_exo5</title>
+		<title>Partie 2 exo5  javaScript</title>
 	</head>
 	<!--   Sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value. To get the current value of an attribute, use getAttribute() ; to remove an attribute, call removeAttribute() .
 -->
 
 	<body>
-		<div class="container">
-			<img
-				src="images/image1.jpg"
-				id="image1"
-				onmouseover="imgover(this.src,0);"
-				onmouseout="imgout(this.src,0);"
-			/>
-			<img
-				src="images/image2.jpg"
-				id="image2"
-				onmouseover="imgover(this.src,1);"
-				onmouseout="imgout(this.src,1);"
-			/>
-			<img
-				src="images/image3.jpg"
-				id="image3"
-				onmouseover="imgover(this.src,2);"
-				onmouseout="imgout(this.src,2);"
-			/>
-			<img
-				src="images/image4.jpg"
-				id="image4"
-				onmouseover="imgover(this.src,3);"
-				onmouseout="imgout(this.src,3);"
-			/>
 
-			<img
-				src="images/image5.jpg"
-				id="image5"
-				onmouseover="imgover(this.src,4);"
-				onmouseout="imgout(this.src,4);"
-			/>
+		<div style="background-color: burlywood; padding-left:30px; margin-bottom:20px;">
+      <br/>
+      <h1>exercice 6 de JavaScript Partie 2</h1>
+      <hr/>
+      <p>Dans le fichier HTML fourni, faire comme dans l'exercice 5 mais remettre l'image d'origine dès que la souris ne survol plus l'image.<br/>
+				Bonus Ne faire que deux fonctions JavaScript pour cet exercice.</p> <br/>
+		</div> <br/><br/>
+		
+
+		<div class="container">
+			<div class="boxImg">
+				<img
+					src="images/image1.jpg"
+					id="image1"
+					onmouseover="imgover(this.src,0);"
+					onmouseout="imgout(this.src,0);"
+				/>
+			</div>
+			<div class="boxImg">
+				<img
+					src="images/image2.jpg"
+					id="image2"
+					onmouseover="imgover(this.src,1);"
+					onmouseout="imgout(this.src,1);"
+				/>
+			</div>
+			<div class="boxImg">
+				<img
+					src="images/image3.jpg"
+					id="image3"
+					onmouseover="imgover(this.src,2);"
+					onmouseout="imgout(this.src,2);"
+				/>
+			</div>
+			<div class="boxImg">
+				<img
+					src="images/image4.jpg"
+					id="image4"
+					onmouseover="imgover(this.src,3);"
+					onmouseout="imgout(this.src,3);"
+				/>
+			</div>
+			<div class="boxImg">
+				<img
+					src="images/image5.jpg"
+					id="image5"
+					onmouseover="imgover(this.src,4);"
+					onmouseout="imgout(this.src,4);"
+				/>
+			</div>
 		</div>
 
 		<script>
@@ -71,12 +97,11 @@
 				// construction de l'adresse de l'image de remplacement
 
 				//console.log(document.getElementsByTagName('img'))
-				// affiche la collection img (otues les images!! ) du document.
+				// affiche la collection img (toutes les images!! ) du document.
 				document.getElementsByTagName('img')[ordre].src = source2;
 			}
 
 			function imgout(SrcImg, ordre) {
-				console.log('en image out , adresse est:' + source1);
 				document.getElementsByTagName('img')[ordre].src = source1;
 			}
 		</script>
@@ -89,6 +114,10 @@
 		</div>
 	</body>
 </html>
+
+
+
+
 
 <!--  ************ pour rappel ********** -->
 <!-- <script>
@@ -122,3 +151,24 @@
     document.getElementsByTagName("img")[ordre].src = source1;
   }
 </script> -->
+
+<!--   Sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value. To get the current value of an attribute, use getAttribute() ; to remove an attribute, call removeAttribute() .
+-->
+
+<!-- idées de départ ******************.
+  
+  div>
+    <img id=my-img src=images/image1.jpg onmouseover=passageDeLaSouris(this); onmouseout=departDeLaSouris(this); />
+
+    <script>
+      //Affecte la nouvelle image lorsque la souris survole l'élément
+      function passageDeLaSouris(element) {
+        element.setAttribute('src', 'images/image1_2.jpg');
+      }
+      //Affecte l'image de départ lorsque la souris ne survole plus l'élément
+      function departDeLaSouris(element) {
+        element.setAttribute('src', 'images/image1.jpg');
+      }
+    </script>
+  </div>
+-->

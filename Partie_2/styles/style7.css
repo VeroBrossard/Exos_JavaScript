@@ -1,0 +1,81 @@
+/* container{
+  width: 70%;
+} */
+
+/* Style all input fields */
+input {
+  width: 35%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  width: 25%;
+}
+
+/* style de bton checkbox*/
+input[type=checkbox]{
+  width: 5%;
+  background-color: crimson;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f17c;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 0px 25px;
+  font-size: 14px;
+  background-color: chartreuse;
+  margin-left: 30px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -15px;
+  content: '✓';
+  /* content: "&#10004;"; */
+}
+/* ***** pk les unicodes/Decimal Code & Hex Code ne passent pas ??  
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -15px;
+  content: '✖';
+  /* content: "&#x2716;";   Hex Code:*/
+  /* content: "&#10006;";  Decimal Code*/
+}
+
+/* The ::before selector inserts something before the content of each selected element(s). Use the content property to specify the content to insert. Use the ::after selector to insert something after the content. */
+/*  ***** vu sur : https://developer.mozilla.org/fr/docs/Web/CSS/:valid#R%C3%A9sultat */
+
+/* In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default. */
+/* ****** code couleur validation sur : https://developer.mozilla.org/fr/docs/Web/CSS/:valid#R%C3%A9sultat */

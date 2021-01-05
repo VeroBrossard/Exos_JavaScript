@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/style7.css">
+  <link rel="stylesheet" href="">
+
+  <title>Exo 7 JavaScript </title>
+</head>
+
+<body style="padding: 0px 50px;">
+  <header>
+    <h1> Exo 7 JavaScript / Formulaire</h1>
+  </header>
+  <container>
+    <form action="#" method="post">
+
+      <fieldset id="bloc1">
+        <legend id="legend1">Votre identité</legend>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" placeholder="ex: EVERGREEN" required><br />
+
+        <label for="firstname">Prénom:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="ex: katniss" required><br />
+
+        <label for="email">Adresse mail :</label>
+        <input type="email" id="email" name="email" placeholder="ex: blablabla@mail.com" required><br />
+
+      </fieldset>
+              <!--        sécurité avec password        -->
+      <fieldset id="bloc2">
+        <legend id="legend2">Sécurité </legend><br />
+
+        <label for="psw">Password</label>
+        <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        <!-- voir la création et l'utilité du pattern en tant qu'attribut, puisque les touches frappées sont testées en JS et que cela n'a pas l'air obligatoire?. 
+          L'attribut pattern est une expression rationnelle que doit respecter la valeur (value) du champ afin d'être valide. (mais... ?? s'il n'y a PAS de "value" ??)
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+        <br />
+        <div id="message">
+          <h3>Password must contain the following:</h3>
+          <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+          <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+          <p id="number" class="invalid">A <b>number</b></p>
+          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
+<!-- 
+        <label for="psw2">Confirmez Password</label><br />
+        <input type="password" id="psw2" name="psw2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required> -->
+
+      </fieldset><br />
+
+      <fieldset id="bloc3">
+        <legend id="legend3"> Validation Inscription </legend><br />
+
+        <input type="checkbox" id="CGUagreement" name="CGUagreement" value="CGUvalue" required>
+
+
+        <label>Veuillez cocher pour indiquer que vous avez lu les CGU <br /> et que vous les acceptez.</label>
+        <br />
+
+        <strong> Tous les champs sont obligatoires</strong><br />
+
+        <input type="submit" name="submitButton" value="S'inscrire !!!">
+      </fieldset>
+    </form>
+    </div>
+    
+    </section>
+  </container>
+
+  <script src="scripts/Exo7_pwdTest.js"></script>
+  <script src="scripts/main7.js"></script>
+</body>
+
+</html>
+
+<!--  documentation
+  https://www.w3schools.com/howto/howto_js_password_validation.asp
+
+-->
