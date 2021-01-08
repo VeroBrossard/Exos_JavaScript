@@ -1,4 +1,4 @@
-
+// fonction en JQuery
 $(document).ready(function(){
  
 			$('.show-password').click(function() {
